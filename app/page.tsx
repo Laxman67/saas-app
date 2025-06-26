@@ -2,13 +2,14 @@ import CompanionCard from '@/components/CompanionCard';
 import CompanionList from '@/components/CompanionList';
 import CTA from '@/components/CTA';
 import { Button } from '@/components/ui/button';
+import { recentSessions } from '@/constants';
 import { Section } from 'lucide-react';
 import React from 'react';
 
 const Page = () => {
   return (
     <>
-      <h1 className="text-2xl underline my-3">Popular Companions</h1>
+      <h2 className="font-bold text-3xl">Popular Companions</h2>
 
       <section className="home-section">
         <CompanionCard
@@ -40,7 +41,11 @@ const Page = () => {
       </section>
 
       <section className="home-section">
-        <CompanionList />
+        <CompanionList
+          title="Recently Completed Sessions"
+          companions={recentSessions}
+          classNames="w-2/3 max-lg:w-full"
+        />
         <CTA />
       </section>
     </>
