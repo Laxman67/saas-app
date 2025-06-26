@@ -20,7 +20,10 @@ const CompanionCard = ({
   color,
 }: CompanionProps) => {
   return (
-    <article className="companion-card" style={{ backgroundColor: color }}>
+    <article
+      className="companion-card"
+      style={{ backgroundColor: color, margin: ' 50px 0' }}
+    >
       <div className="flex justify-between items-center">
         <div className="subject-badge">{subject}</div>
         <Button className="companion-bookmark">

@@ -8,7 +8,7 @@ import React from 'react';
 
 const Page = () => {
   return (
-    <>
+    <div className="m-6">
       <h2 className="font-bold text-3xl">Popular Companions</h2>
 
       <section className="home-section">
@@ -48,7 +48,7 @@ const Page = () => {
         />
         <CTA />
       </section>
-    </>
+    </div>
   );
 };
 
