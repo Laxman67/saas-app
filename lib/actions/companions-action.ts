@@ -33,8 +33,10 @@ export const getAllCompanions = async ({
   topic,
 }: GetAllCompanions) => {
   const supabase = createSupabaseClient();
+
   let query = supabase.from('Companions').select();
   console.log('Query ,', query);
+
   if (subject && topic) {
     query = query
       .ilike('subject', `%${subject}`)
