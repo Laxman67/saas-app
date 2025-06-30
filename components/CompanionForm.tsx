@@ -1,3 +1,4 @@
+'use client';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -48,7 +49,6 @@ const CompanionForm = () => {
   // 2. Define a submit handler.
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     const companion = await createCompanions(values);
-    console.log(values);
 
     if (companion) {
       redirect(`/companions/${companion.id}`); // ✅ use push for client redirect
