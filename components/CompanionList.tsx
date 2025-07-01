@@ -1,7 +1,6 @@
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -17,11 +16,7 @@ interface CompanionListProps {
   classNames?: string;
 }
 
-const CompanionList = ({
-  title,
-  companions,
-  classNames,
-}: CompanionListProps) => {
+const CompanionList = ({ companions, classNames }: CompanionListProps) => {
   return (
     <>
       <article className={cn('companion-list', classNames)}>
